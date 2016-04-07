@@ -91,43 +91,43 @@ function game15(){
 		for (var yi = 0; yi < 4; yi++) {
 			for (var xj = 0; xj < 4; xj++) {
 				if (arr[yi][xj] > 0) {
-											$("<div></div>",{
-													'width': boneSize+"px",
-													'height': boneSize+"px",})		// создаем костяшки
-												.addClass("bones")
-												.css({
+					$("<div></div>",{
+						'width': boneSize+"px",
+						'height': boneSize+"px",})		// создаем костяшки
+						.addClass("bones")
+						.css({
 
 
 
-													'left': xj*boneSize+"px",
-													'top': yi*boneSize+"px",})			// стили костяшки
+							'left': xj*boneSize+"px",
+							'top': yi*boneSize+"px",})// стили костяшки
 
-												.appendTo('.wrapperr')
-												.append($('<p></p>')).text(arr[yi][xj])			// пишем цифры
-												.css({
-													'text-align':'center',
-													'color':'white',
-													'text-weight':'bold',
-													'font-family':'arial',
-													'line-height':boneSize+"px",
-													'font-size':Math.floor(boneSize/3)+"px",
-													'color':'white',});									// размер шрифта 1/3
+								.appendTo('.wrapperr')
+								.append($('<p></p>')).text(arr[yi][xj])	// пишем цифры
+								.css({
+									'text-align':'center',
+									'color':'white',
+									'text-weight':'bold',
+									'font-family':'arial',
+									'line-height':boneSize+"px",
+									'font-size':Math.floor(boneSize/3)+"px",
+									'color':'white',});			// размер шрифта 1/3
 				}
 				else{
-											$("<div></div>",{
-													'width': boneSize+"px",
-													'height': boneSize+"px",})		// создаем костяшки
-												.addClass("bones")
-												.css({
-													'background-color':'#999',  // это цвет пустой костяшки
+				$("<div></div>",{
+					'width': boneSize+"px",
+					'height': boneSize+"px",})// создаем костяшки
+						.addClass("bones")
+						.css({
+							'background-color':'#999',  // это цвет пустой костяшки
 
 
-													'left': xj*boneSize+"px",
-													'top': yi*boneSize+"px",
-													'margin-left':'auto',
-													'margin-right':'auto',})			// стили костяшки
+							'left': xj*boneSize+"px",
+							'top': yi*boneSize+"px",
+							'margin-left':'auto',
+							'margin-right':'auto',})// стили костяшки
 
-												.appendTo('.wrapperr') 	// цифру на ней не пишем -  маленький костыль
+							.appendTo('.wrapperr') 	// цифру на ней не пишем -  маленький костыль
 				}
 			/*alert('xj= ' + xj + ' yi= ' + yi + ' bone= '+ arr[yi][xj]);*/
 			}
